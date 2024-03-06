@@ -15,7 +15,7 @@ const browsersync = require('browser-sync').create();
 
 
 //complie sass and js
-// Sass Task
+//Sass Task
 function scssTask() {
   return src('app/scss/style.scss', { sourcemaps: true }) //take this file , set sourcemap to true used to debug and see where some style rule coming from
     .pipe(sass()) // complie it to css , gulp-sass modules

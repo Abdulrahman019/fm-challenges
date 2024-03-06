@@ -5,6 +5,8 @@ html {
 
 *, *::after , *::before {
   box-sizing: inherit;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 body{

@@ -33,7 +33,7 @@
     </div>
 
     <fieldset class="header__toggle toggle" aria-label="Theme Switcher" role="radiogroup">
-      <label for="dark">Dark</label> 
+
       <div class="toggle__wrapper">
         <input type="radio" name="theme" id="dark">
         <input type="radio" name="theme" id="system" checked>
@@ -41,41 +41,232 @@
         <span aria-hidden="true" class="toggle__background"></span>
         <span aria-hidden="true" class="toggle__button"></span>
       </div>
-      <label for="system">System Pref</label> 
+      <label for="dark">Dark</label> 
+      <label for="system">System</label> 
       <label for="light">Light</label>
     </fieldset>
 
   </header>
   <main>
+    <section class="container cards">
+      <div class="card card--facebook">
+        <div class="card__platform">
+            <img class="card__icon" src="/images/icon-facebook.svg" alt="Facebook">
+          <div class="card__username">@nathanf</div>
+        </div>
+        <div class="card__followers">
+          <div class="card__followers__count card__followers__count--big">1987</div>
+          <div class="card__followers__label">Followers</div>
+        </div>
+        <div class="card__change card__change--up">
+          <img src="/images/icon-up.svg" alt="up arrow">
+          <div class="card__change--number">
+            12 Today
+          </div>
+        </div>
+      </div>
 
+      <div class="card card--twitter">
+        <div class="card__platform">
+            <img class="card__icon" src="/images/icon-twitter.svg" alt="Twitter">
+          <div class="card__username">@nathanf</div>
+        </div>
+        <div class="card__followers">
+          <div class="card__followers__count card__followers__count--big">1044</div>
+          <div class="card__followers__label">Followers</div>
+        </div>
+        <div class="card__change card__change--up">
+          <img src="/images/icon-up.svg" alt="up arrow">
+          <div class="card__change--number">99 Today</div>
+        </div>
+      </div>
+
+      <div class="card card--instagram">
+        <div class="card__platform">
+            <img class="card__icon" src="/images/icon-instagram.svg" alt="Instagram">
+          <div class="card__username">@realnathanf
+            
+            
+          </div>
+        </div>
+        <div class="card__followers">
+          <div class="card__followers__count card__followers__count--big">11k</div>
+          <div class="card__followers__label">Followers</div>
+        </div>
+        <div class="card__change card__change--up">
+          <img src="/images/icon-up.svg" alt="up arrow">
+          <div class="card__change--number">
+            1099 Today
+          </div>
+        </div>
+      </div>
+
+      <div class="card card--youtube">
+        <div class="card__platform">
+            <img class="card__icon" src="/images/icon-youtube.svg" alt="Youtube">
+          <div class="card__username">Nathan F.</div>
+        </div>
+        <div class="card__followers">
+          <div class="card__followers__count card__followers__count--big">8239</div>
+          <div class="card__followers__label">Subscribers</div>
+        </div>
+        <div class="card__change card__change--down">
+          <img src="/images/icon-down.svg" alt="up arrow">
+          <div class="card__change--number">
+            144 Today
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container">
+      <h2>Overview - Today</h2>
+      <div class="cards">
+        <div class="card card--facebook__grid card--grid">
+          <div class="card__username ">Page Views</div>
+            <img class="card__icon " src="/images/icon-facebook.svg" alt="Facebook">
+          <span class="card__followers__count card__followers__count--small">
+            87
+          </span>
+          <div class="card__change card__change--up ">
+            <img src="/images/icon-up.svg" alt="up arrow">
+            <div class="card__change--number">
+              3%
+            </div>
+          </div>
+        
+        </div>
+        <div class="card card--facebook__grid card--grid">
+          <div class="card__username ">Likes</div>
+            <img class="card__icon " src="/images/icon-facebook.svg" alt="Facebook">
+          <span class="card__followers__count card__followers__count--small">
+            52
+          </span>
+          <div class="card__change card__change--down ">
+            <img src="/images/icon-down.svg" alt="down arrow">
+            <div class="card__change--number">
+              2%
+            </div>
+          </div>
+        
+        </div>
+        <div class="card card--instagram__grid card--grid">
+          <div class="card__username ">Likes</div>
+            <img class="card__icon " src="/images/icon-instagram.svg" alt="Instagram">
+          <span class="card__followers__count card__followers__count--small">
+            5462
+          </span>
+          <div class="card__change card__change--up ">
+            <img src="/images/icon-up.svg" alt="up arrow">
+            <div class="card__change--number">
+              2257%
+            </div>
+          </div>
+        
+        </div>
+        <div class="card card--instagram__grid card--grid">
+          <div class="card__username ">  Profile Views
+          </div>
+            <img class="card__icon " src="/images/icon-instagram.svg" alt="Instagram">
+          <span class="card__followers__count card__followers__count--small">
+            52k
+          </span>
+          <div class="card__change card__change--up ">
+            <img src="/images/icon-up.svg" alt="up arrow">
+            <div class="card__change--number">
+              1375%
+            </div>
+          </div>
+        
+        </div>
+        <div class="card card--twitter__grid card--grid">
+          <div class="card__username ">  Retweets
+          </div>
+            <img class="card__icon " src="/images/icon-twitter.svg" alt="Twitter">
+          <span class="card__followers__count card__followers__count--small">
+            117
+          </span>
+          <div class="card__change card__change--up ">
+            <img src="/images/icon-up.svg" alt="up arrow">
+            <div class="card__change--number">
+              303%
+            </div>
+          </div>
+        
+        </div>
+        <div class="card card--twitter__grid card--grid">
+          <div class="card__username ">  Likes
+          </div>
+            <img class="card__icon " src="/images/icon-twitter.svg" alt="Twitter">
+          <span class="card__followers__count card__followers__count--small">
+            507
+          </span>
+          <div class="card__change card__change--up ">
+            <img src="/images/icon-up.svg" alt="up arrow">
+            <div class="card__change--number">
+              553%
+            </div>
+          </div>
+        
+        </div>
+        <div class="card card--youtube__grid card--grid">
+          <div class="card__username ">  Likes
+          </div>
+            <img class="card__icon " src="/images/icon-youtube.svg" alt="Youtube">
+          <span class="card__followers__count card__followers__count--small">
+            107
+          </span>
+          <div class="card__change card__change--down ">
+            <img src="/images/icon-down.svg" alt="down arrow">
+            <div class="card__change--number">
+              19%
+            </div>
+          </div>
+        
+        </div>
+        <div class="card card--youtube__grid card--grid">
+          <div class="card__username ">    Total Views
+          </div>
+            <img class="card__icon " src="/images/icon-youtube.svg" alt="Youtube">
+          <span class="card__followers__count card__followers__count--small">
+            1407
+          </span>
+          <div class="card__change card__change--down ">
+            <img src="/images/icon-down.svg" alt="down arrow">
+            <div class="card__change--number">
+              12%
+            </div>
+          </div>
+        
+        </div>
+
+      </div>
+
+    </section>
   </main>
 
 
   
 
-  @nathanf
-  1987
-  Followers
-  12 Today
 
-  @nathanf
+
+  <!-- @nathanf
   1044
   Followers
-  99 Today
+  99 Today -->
 
-  @realnathanf
+  <!-- @realnathanf
   11k
   Followers
-  1099 Today
+  1099 Today -->
 
-  Nathan F.
+  <!-- Nathan F.
   8239
   Subscribers
-  144 Today
+  144 Today -->
 
 
 
-  Overview - Today
+  <!-- Overview - Today
 
   Page Views
   87
@@ -84,6 +275,7 @@
   Likes
   52
   2%
+
 
   Likes
   5462
@@ -107,7 +299,7 @@
 
   Total Views
   1407
-  12%
+  12% -->
   
   <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
