@@ -21,20 +21,21 @@
   
 }
 
+
 .card {
   padding: rem(24);
-  background: var(--dark-card);
-  color: var(--dark-text1);
+  background: var(--card-bg);
+  color: var(--text-color2);
   // width: rem(256);
   text-align:center;
   border-radius: rem(5);
   flex:1;
   overflow: hidden;
   cursor: pointer;
-  transition: all 200ms ease-in-out;
+  transition: all 400ms ease-in-out !important;
 
   &:hover{
-    background: var(--dark-card-hover);
+    background: var(--card-hover);
     transform: scale(1.08);
 
   }
@@ -44,7 +45,6 @@
 
       box-shadow: rem(0) rem(0) rem(8) rem(2) var(--facebook-shadow);
     }
-    transition: all 400ms ease-in-out;
     &:hover, &__grid:hover{
       box-shadow: rem(0) rem(0) rem(16) rem(2) var(--facebook-shadow-hover);
 
@@ -57,7 +57,6 @@
 
       box-shadow: rem(0) rem(0) rem(8) rem(2) var(--twitter-shadow);
     }
-    transition: all 400ms ease-in-out;
     &:hover,&__grid:hover{
       box-shadow: rem(0) rem(0) rem(16) rem(2) var(--twitter-shadow-hover);
 
@@ -99,7 +98,6 @@
     &,&__grid{
       box-shadow: rem(0) rem(0) rem(8) rem(2) var(--youtube-shadow);
     }
-    transition: all 400ms ease-in-out;
     &:hover, &__grid:hover{
       box-shadow: rem(0) rem(0) rem(16) rem(2) var(--youtube-shadow-hover);
 
@@ -162,7 +160,7 @@
   &__followers{
     margin-bottom: rem(24);
     &__count{
-      color: var(--light-bg);
+      color: var(--text-color);
       &--big{
         font-size: rem(56);
         font-weight: 700;

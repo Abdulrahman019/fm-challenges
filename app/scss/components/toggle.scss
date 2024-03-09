@@ -2,34 +2,44 @@
 
 .toggle {
   display: grid;
-  grid-template-columns: 1fr rem(60) 1fr;
-  grid-template-rows: repeat(2,1fr);
+  grid-template-columns: 1fr rem(48) ;
   border: none;
-  gap: rem(4.8) rem(8);
+  gap: rem(4.8) rem(12);
   margin: 0;
 
+  // label{
+  //   font-size: rem(14);
+  //   align-self: center;
+  //   &[for='dark']{
+  //     grid-column: 1 / 2;
+  //     justify-self: end;
+  //   }
+  //   &[for='system']{
+  //     grid-column: 1 / 4;
+  //     grid-row: 2 / 3;
+  //     justify-self: center;
+  //     align-self: start;
+
+  //   }
+  //   &[for='light']{
+  //     grid-column: 3 / 4;
+  //     justify-self: start;
+  //   }
+  // }
+
   label{
-    font-size: rem(14);
-    align-self: center;
-    &[for='dark']{
+      font-size: rem(14);
       grid-column: 1 / 2;
-      justify-self: end;
-    }
-    &[for='system']{
-      grid-column: 1 / 4;
-      grid-row: 2 / 3;
-      justify-self: center;
-      align-self: start;
+      font-weight: 700;
+      color: var(--toggle);
+    &[for="dark"]{
+      line-height: rem(24);
 
     }
-    &[for='light']{
-      grid-column: 3 / 4;
-      justify-self: start;
-    }
+
   }
   &__wrapper{
     grid-column: 2 / 3;
-    grid-row: 1 / 2;
     height: rem(24);
     position: relative;
     overflow: hidden;
@@ -42,13 +52,13 @@
   input[type='radio']{
     opacity: 0;
     margin: 0;
-    width: calc(100%/3);
+    width: calc(100%/2);
     min-width: rem(20);
     height: 100%;
     border-radius: 0;
 
     &:focus ~ .toggle__button{
-      border: 2px solid white;
+      border: 2px solid var(--toggle-focus);
     }
   }
   &__background{
@@ -59,11 +69,12 @@
     top: rem(0);
     overflow: hidden;
     border-radius: rem(12);
-    background: linear-gradient(
-      225deg,
-      var(--toggle-bg-end) 0%,
-      var(--toggle-bg-start) 98.02%
-    );
+    background: var(--toggle-bg);
+    // background: linear-gradient(
+    //   225deg,
+    //   var(--toggle-bg-end) 0%,
+    //   var(--toggle-bg-start) 98.02%
+    // );
     pointer-events: none;
 
   }
@@ -76,7 +87,7 @@
     top: rem(3);
     right: 100%;
     border-radius:50%;
-    background-color: var(--dark-bg);
+    background: var(--toggle-button);
     transition:all 150ms ease-in-out;
     
   }
