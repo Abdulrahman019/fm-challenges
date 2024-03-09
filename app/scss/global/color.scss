@@ -77,6 +77,8 @@ body.light {
   --toggle: var(--toggle-light);
   --toggle-bg: var(--toggle-bg-light);
   --toggle-button: var(--toggle-button-light);
+  --toggle-focus: var(--light-text2);
+
 }
 
 body.dark {
@@ -86,6 +88,7 @@ body.dark {
   --card-bg: var(--dark-card);
   --card-hover: var(--dark-card-hover);
   --toggle: var(--light-bg);
+  --toggle-focus: var(--light-bg);
   --toggle-bg: linear-gradient(
     225deg,
     var(--toggle-bg-end) 0%,
