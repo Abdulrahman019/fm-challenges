@@ -18,6 +18,7 @@ body{
 }
 
 .visually-hidden {
+  //can't be readed by screen reader
   position: absolute;
   left: -10000px;
   top: auto;
