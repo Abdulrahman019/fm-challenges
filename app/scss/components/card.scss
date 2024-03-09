@@ -84,11 +84,11 @@
       ); 
     }
     &,&__grid{
-      box-shadow: rem(0) rem(0) rem(8) rem(2) var(--instagram-start-shadow);
+      box-shadow: rem(0) rem(0) rem(8) rem(0) var(--instagram-shadow) ,  rem(0) rem(0) rem(4) rem(2) var(--instagram-shadow2) , rem(0) rem(0) rem(8) rem(0) var(--instagram-shadow3);
     }
     transition: all 400ms ease-in-out;
     &:hover , &__grid:hover{
-      box-shadow: rem(0) rem(0) rem(8) rem(2) var(--instagram-end-shadow);
+      box-shadow: rem(-4) rem(0) rem(8) rem(0) var(--instagram-shadow-hover),  rem(0) rem(0) rem(12) rem(2) var(--instagram-shadow2-hover)  , rem(4) rem(0) rem(8) rem(0) var(--instagram-shadow3-hover);
 
     }
   }
