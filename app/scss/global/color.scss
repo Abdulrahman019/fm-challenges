@@ -15,11 +15,11 @@
   --youtube: hsl(348, 97%, 39%);
   --youtube-shadow: hsla(348, 97%, 39%, 0.1);
   --youtube-shadow-hover: hsla(348, 97%, 39%, 0.8);
-  --toggle-bg-light: hsl(230, 22%, 74%);
+  --light-top-bg: hsl(225, 100%, 98%);
+
+
   --toggle-bg-start: hsl(210, 78%, 56%);
   --toggle-bg-end: hsl(146, 68%, 55%);
-  --toggle-light: hsl(230, 19%, 60%);
-  --toggle-button-light: hsl(228, 46%, 96%);
   --dark-bg: hsl(230, 17%, 14%);
   --dark-top-bg: hsl(232, 19%, 15%);
   --dark-card: hsl(228, 28%, 20%);
@@ -27,11 +27,18 @@
   --dark-text1: hsl(228, 34%, 66%);
   --dark-text2: hsl(0, 0%, 100%);
   --light-bg: hsl(0, 0%, 100%);
-  --light-top-bg: hsl(225, 100%, 98%);
+
+  --light-bg: hsl(0, 0%, 100%);
   --light-card: hsl(227, 47%, 96%);
   --light-card-hover: hsl(228, 33%, 91%);
   --light-text1: hsl(230, 12%, 44%);
   --light-text2: hsl(230, 17%, 14%);
+  --toggle-bg-light: hsl(230, 22%, 74%);
+  --toggle-light: hsl(230, 19%, 60%);
+  --toggle-button-light: hsl(228, 46%, 96%);
+
+
+
 
 }
 
@@ -69,6 +76,8 @@
 }
 
 body.light {
+
+  
   --background: var(--light-bg);
   --text-color: var(--light-text2);
   --text-color2: var(--light-text1);
@@ -78,10 +87,12 @@ body.light {
   --toggle-bg: var(--toggle-bg-light);
   --toggle-button: var(--toggle-button-light);
   --toggle-focus: var(--light-text2);
-
+  
 }
 
 body.dark {
+
+
   --background: var(--dark-bg);
   --text-color: var(--dark-text2);
   --text-color2: var(--dark-text1);

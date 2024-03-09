@@ -6,25 +6,63 @@
 
   <title>Frontend Mentor | [Dashboard With Modes]</title>
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
-      rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+  rel="stylesheet"
   />
   
   <link rel="stylesheet" href="dist/style.css">
-  <script defer src="./dist/script.js">!</script>
-
+  
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
+
+
+<script defer src="./dist/script.js"></script>
+
 </head>
 <body>
+  <script>
+  function x(){
+      if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        console.log("dark")
+          if(localStorage.getItem('colorMode') == 'light'){
+            document.querySelector('body').classList.add('light')
+            document.querySelector('body').classList.remove('dark')
+            localStorage.setItem('colorMode', 'light');
+    
+          }else{
+            document.querySelector('body').classList.add('dark')
+            document.querySelector('body').classList.remove('light')
+            localStorage.setItem('colorMode', 'dark');
+    
+          }
+         }else if(window.matchMedia('(prefers-color-scheme: dark)').matches){
+          if(localStorage.getItem('colorMode') === 'dark'){
+            document.querySelector('body').classList.add('dark')
+            document.querySelector('body').classList.remove('light')
+            localStorage.setItem('colorMode', 'dark');
+    
+          }else{
+            document.querySelector('body').classList.add('light')
+             document.querySelector('body').classList.remove('dark')
+             localStorage.setItem('colorMode', 'light');
+    
+          }
+         }else{
+          document.querySelector('body').classList.add('light')
+             document.querySelector('body').classList.remove('dark')
+             localStorage.setItem('colorMode', 'light');
+         }
+    
+    } 
+    x();
+           </script>
   <header class="header container">
     <div class="header__title">
       <h1>Social Media Dashboard</h1>

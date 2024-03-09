@@ -16,11 +16,20 @@ const darkButton = document.getElementById('dark');
 const lightButton = document.getElementById('light');
 
 const setDarkMode = () => {
+  if(document.querySelector('body').classList == 'light'){
+
+    document.querySelector('body').classList.remove('light');
+  }
   document.querySelector('body').classList = 'dark';
+  
   localStorage.setItem('colorMode', 'dark');
 };
 
 const setLightMode = () => {
+  if(document.querySelector('body').classList == 'dark'){
+
+    document.querySelector('body').classList.remove('dark');
+  }
   document.querySelector('body').classList = 'light';
   localStorage.setItem('colorMode', 'light');
 };
