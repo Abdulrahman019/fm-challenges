@@ -27,42 +27,6 @@
 
 </head>
 <body>
-  <script>
-  function x(){
-      if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        console.log("dark")
-          if(localStorage.getItem('colorMode') == 'light'){
-            document.querySelector('body').classList.add('light')
-            document.querySelector('body').classList.remove('dark')
-            localStorage.setItem('colorMode', 'light');
-    
-          }else{
-            document.querySelector('body').classList.add('dark')
-            document.querySelector('body').classList.remove('light')
-            localStorage.setItem('colorMode', 'dark');
-    
-          }
-         }else if(window.matchMedia('(prefers-color-scheme: dark)').matches){
-          if(localStorage.getItem('colorMode') === 'dark'){
-            document.querySelector('body').classList.add('dark')
-            document.querySelector('body').classList.remove('light')
-            localStorage.setItem('colorMode', 'dark');
-    
-          }else{
-            document.querySelector('body').classList.add('light')
-             document.querySelector('body').classList.remove('dark')
-             localStorage.setItem('colorMode', 'light');
-    
-          }
-         }else{
-          document.querySelector('body').classList.add('light')
-             document.querySelector('body').classList.remove('dark')
-             localStorage.setItem('colorMode', 'light');
-         }
-    
-    } 
-    x();
-           </script>
   <header class="header container">
     <div class="header__title">
       <h1>Social Media Dashboard</h1>
@@ -72,7 +36,7 @@
 
     <fieldset class="header__toggle toggle" aria-label="Theme Switcher" role="radiogroup">
       
-      <label for="dark">Dark Mode <span class="visually-hidden" >On</span></label> 
+      <label for="dark">Dark Mode <span id="darkon" >On</span><span id="darkoff">Off</span></label> 
       <div class="toggle__wrapper">
         <input type="radio" name="theme" id="dark">
         <!-- <input type="radio" name="theme" id="system" checked> -->
@@ -80,13 +44,64 @@
         <span aria-hidden="true" class="toggle__background"></span>
         <span aria-hidden="true" class="toggle__button"></span>
       </div>
-      <label for="light"class="visually-hidden" >Dark Mode <span >Off</span></label> 
+      <label for="light" ></label> 
       <!-- <label for="dark">Dark Mode</label>  -->
       <!-- <label for="system">System</label>  -->
       <!-- <label for="light">Light</label> -->
     </fieldset>
 
   </header>
+  <script>
+    function x(){
+      const DarkModeOn = document.getElementById("darkon");
+      const DarkModeOff = document.getElementById("darkoff");
+    const setDarkMode = () => {
+  if(document.querySelector('body').classList == 'light'){
+    document.querySelector('body').classList.remove('light');
+    DarkModeOff.classList.remove('readable-by-screenreader');
+    DarkModeOff.classList='visually-hidden';
+  }
+  DarkModeOn.classList.remove('visually-hidden');
+  DarkModeOn.classList='readable-by-screenreader';
+  document.querySelector('body').classList = 'dark';
+  localStorage.setItem('colorMode', 'dark');
+};
+
+const setLightMode = () => {
+  if(document.querySelector('body').classList == 'dark'){
+    document.querySelector('body').classList.remove('dark');
+    DarkModeOn.classList.remove('readable-by-screenreader');
+    DarkModeOn.classList='visually-hidden';
+
+  }
+  DarkModeOff.classList='readable-by-screenreader';
+  DarkModeOff.classList.remove('visually-hidden');
+  document.querySelector('body').classList = 'light';
+  localStorage.setItem('colorMode', 'light');
+};
+      if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        console.log("dark")
+          if(localStorage.getItem('colorMode') == 'light'){
+            setLightMode();
+    
+          }else{
+            setDarkMode();
+    
+          }
+         }else if(window.matchMedia('(prefers-color-scheme: dark)').matches){
+          if(localStorage.getItem('colorMode') === 'dark'){
+            setDarkMode();
+    
+          }else{
+            setLightMode();    
+          }
+         }else{
+            setLightMode();
+         }
+    
+    } 
+    x();
+           </script>
   <main>
     <section class="container cards">
       <div class="card card--facebook">
